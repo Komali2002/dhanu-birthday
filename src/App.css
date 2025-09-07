@@ -98,3 +98,46 @@
   height: 300px;       /* set the desired height */
   margin-top: 12px;   /* spacing from title */
 }
+
+.game-card {
+  width: 300px;
+  height: 200px;
+  background: linear-gradient(135deg, #f472b6, #fcd34d); /* pink to yellow gradient */
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+.game-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.game-card h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.game-card p {
+  font-size: 1rem;
+  margin: 0;
+}
+
+
+
+/* subtle floating animation */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  100% { transform: translateY(-10px); }
+}
+
