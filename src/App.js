@@ -57,7 +57,7 @@ export default function App() {
       {/* 1️⃣ Confirmation Question */}
       {!confirmed && !showLetter && (
         <div style={{ marginTop: "50px" }}>
-          <h1>💖 Happy Birthday, My Friend 💖</h1>
+          <h1>💖 Happy Birthday, My BestFriend 💖</h1>
           <p
             style={{
               fontSize: "18px",
@@ -67,7 +67,7 @@ export default function App() {
             }}
           >
             On this special day, I just want to remind you how lucky I am to
-            have you in my life. You are my family. 🎉
+            have you in my life. 🎉
           </p>
 
           <h3>Before you enter your Birthday Surprise... 🥰</h3>

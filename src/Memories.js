@@ -16,7 +16,7 @@ const PAGES = [
     type: "year",
     year: 2017,
     img: "/photos/2017.jpeg",
-    caption: "Our friendship got stronger and we became so close that our teachers tried to make us sit separately 😆",
+    caption: "Our friendship got stronger and we became so close that our teachers tried to make us sit separately 😆(Idhi 2017 pic kadhu le)",
   },
   {
     type: "year",
@@ -70,8 +70,7 @@ const PAGES = [
   },
   {
     type: "letter",
-    content: `Dear Dhanu 💕,
-
+    content: `
 I honestly don’t even know where to start.From the very beginning, you’ve been my best friend — and I can say this without doubt:
  you’ll always be my first priority among friends.
 
@@ -91,16 +90,12 @@ Even though we technically met in 8th class, it never felt like just “school f
 2022, 2023, 2024 — each of those years were filled with so many little things.
  Inside jokes, random laughs, celebrations, small moments that just made me realize how lucky I am to have you in my life 😄🌸🥰🌹.
 
-And now 2025… this year, I just want to celebrate our friendship.
  🎂💖 Thank you for being my best friend through everything, for sticking with me all these years. And… let’s promise to stay like this forever, for a lifetime ❤️.
 
 You’ve been my best friend from 2016 to now, and I know that no matter what, nothing can change that.
  You’ve always been there since 8th class, trying to do everything you could for me, even in small ways — and I’ve never taken that for granted.
  
-I just want you to know… you’re irreplaceable. And I’m so, so grateful for you.
-
-With all my love,
-— Komaliii 💖`,
+I just want you to know… you’re irreplaceable. And I’m so, so grateful for you.`,
   },
   {
     type: "end",
@@ -163,21 +158,56 @@ export default function Memories() {
   alt={`Memory ${PAGES[index].year}`}
   className="memory-img"
 />
+           
 
               <p className="text-lg italic">{PAGES[index].caption}</p>
             </>
           )}
 
           {PAGES[index].type === "letter" && (
-            <>
-              <h1 className="text-3xl font-bold mb-4">💌 A Letter For You</h1>
-              <p className="text-left whitespace-pre-line leading-relaxed">{PAGES[index].content}</p>
-            </>
+            <div style={{ maxHeight: "400px",marginLeft:"85px",marginRight:"85px" }}>
+              <h2>Dear Dhanu 💕</h2>
+              <p>{PAGES[index].content}</p>
+              <h5>With all my love<br/>— Komaliii 💖</h5>
+            </div>
           )}
 
-          {PAGES[index].type === "end" && (
-            <h1 className="text-3xl font-bold">{PAGES[index].content}</h1>
-          )}
+         {PAGES[index].type === "end" && (
+  <div className="flex flex-col items-center justify-center relative w-full h-full">
+    {/* Gradient Frame */}
+    <div className="p-6 rounded-2xl bg-gradient-to-br from-pink-200 via-yellow-200 to-purple-200 shadow-2xl text-center w-[400px]">
+      {/* Animated Title */}
+      <motion.h1
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1.2 }}
+        className="text-3xl font-bold text-pink-700 mb-4"
+      >
+        ✨ The End… but our story continues forever ✨
+      </motion.h1>
+
+      {/* Decorative Subtitle */}
+      <p className="text-lg italic text-purple-600">
+        Thank you for all the beautiful memories we’ve shared! 💖
+      </p>
+
+      {/* Decorative Emoji Row */}
+      <div className="text-3xl flex justify-center gap-3 mt-4 animate-bounce">
+        <span>👭</span>
+        <span>🌸</span>
+        <span>💫</span>
+        <span>💖</span>
+      </div>
+        <img
+  src="/photos/end.png"
+  alt="Friendship Illustration"
+  className="end-img"
+/>
+    </div>
+
+  </div>
+)}
+
         </motion.div>
       </AnimatePresence>
 
